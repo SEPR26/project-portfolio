@@ -10,6 +10,7 @@ const personalMovieDB = {
       personalMovieDB.count = +prompt("Напишите ответ правильно. Сколько фильмов вы уже посмотрели", '');
     }
   },
+
   rememberMyFilms: () => {
     for (i = 0; i < 2; i++) {
       const a = prompt('Один из последних просмотренных фильмов?', "");
@@ -24,6 +25,7 @@ const personalMovieDB = {
       }
     }
   },
+
   detectPersonalLevel: () => {
     if (personalMovieDB.count < 10 && personalMovieDB.count > 0) {
       console.log("Мало фильмов смотришь");
@@ -39,11 +41,13 @@ const personalMovieDB = {
       console.log("Eror");
     }
   },
+
   showMyDB: (hidden) => {
     if (!hidden) {
       console.log(personalMovieDB);
     }
   },
+
   toggleVisibleMyDB: () => {
     if (personalMovieDB.privat) {
       personalMovieDB.privat = false;
@@ -51,6 +55,7 @@ const personalMovieDB = {
       personalMovieDB.privat = true;
     }
   },
+
   writeYourGenres: () => {
     for (let i = 1; i < 2; i++) {
       let genres = prompt(`Введие ваши любимые жанры через запятую`).toLowerCase();
